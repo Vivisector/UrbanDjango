@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+</head>
+<body>
+    <h1>Магазин</h1>
+    <ul>
+        {% for key, item in items.items %}
+            <li>{{ item }}
+                <button>Добавить в корзину</button>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/"><button>Вернуться на главную</button></a>
+    <a href="/cart"><button>В корзину</button></a>
+</body>
+</html>
