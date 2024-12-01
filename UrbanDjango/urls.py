@@ -16,23 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import render
+# from django.shortcuts import render
 # from UrbanDjango.task3 import views
 
 # from django.http import HttpResponse
 
 
 # Временная функция для отображения текста на главной странице
-def home(request):
-    # return HttpResponse("<h1>Добро пожаловать на главную страницу!</h1>")
-    return render(request, "home.html")
+# def home(request):
+#     # return HttpResponse("<h1>Добро пожаловать на главную страницу!</h1>")
+#     return render(request, "home.html")
 
 
 urlpatterns = [
-    path('/', admin.site.urls),
     path('admin/', admin.site.urls),
+    path('', include('task4.urls')),  # маршруты из task2
     path('task2/', include('task2.urls')),  # маршруты из task2
-    path('', include('task3.urls')),  # маршруты из task3
-    # path('', home, name='home'), # главная страница (от предыдущего Д.Задания)
+    path('task3/', include('task3.urls')),  # маршруты из task2
+    path('task4/', include('task4.urls')),  # маршруты из task4
+
 
 ]
