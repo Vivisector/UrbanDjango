@@ -17,6 +17,8 @@ def sign_up_by_html(request):
             info['error'] = 'Пароли не совпадают'
         elif age < 18:
             info['error'] = 'Вы должны быть старше 18'
+        elif age > 120:  # ограничение на максимальный возраст
+            info['error'] = 'Возраст должен быть реальным (до 120 лет)'
         elif username in users:
             info['error'] = 'Пользователь уже существует'
         else:
