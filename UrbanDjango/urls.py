@@ -30,9 +30,10 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('task4.urls')),  # маршруты из task2
+    path('', include('task1.urls')),  # маршруты из task1
+    path('task1/', include('task1.urls')),  # маршруты из task1
     path('task2/', include('task2.urls')),  # маршруты из task2
-    path('task3/', include('task3.urls')),  # маршруты из task2
+    # path('task3/', include('task3.urls')),  # маршруты из task2
     path('task4/', include('task4.urls')),  # маршруты из task4
     path('task5/', include('task5.urls')),  # маршруты из task5
 
