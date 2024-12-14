@@ -1,0 +1,16 @@
+{% extends 'first_task/menu.html' %}
+
+{% block pagename %}
+Игры
+{% endblock %}
+
+{% block content %}
+<h1>Игры</h1>
+<ul>
+    {% for game in games %}
+        <li>{{ game }}
+            <button>Добавить в корзину</button>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

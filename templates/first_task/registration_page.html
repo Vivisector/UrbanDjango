@@ -1,8 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Регистрация</title>
-</head>
+{% extends 'main/base.html' %}
+
+{% block title %}регистрация{% endblock %}
+
+{% block content %}
 <body>
     <h1>Страница регистрации</h1>
     {% if error %}
@@ -23,7 +23,7 @@
             {% csrf_token %}
             <label for="username">Введите логин:</label>
             <input type="text" id="username" name="username" maxlength="30" required><br>
-
+</br>
             <label for="password">Введите пароль:</label>
             <input type="password" id="password" name="password" minlength="8" required><br>
 
@@ -37,4 +37,5 @@
         </form>
     {% endif %}
 </body>
+{% endblock %}
 </html>
